@@ -1,0 +1,13 @@
+run
+walk
+swim
+dive
+eat
+sleep
+read
+program
+type
+write
+live
+breathe
+talk

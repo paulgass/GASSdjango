@@ -1,0 +1,13 @@
+FROM python:3
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /gassdjangodocker
+WORKDIR /gassdjangodocker
+ADD . /gassdjangodocker/
+RUN pip3 install --upgrade pip
+RUN pip3 install pipenv
+ONBUILD COPY Pipfile Pipfile
+ONBUILD COPY Pipfile.lock Pipfile.lock
+RUN pipenv install --deploy --ignore-pipfile
+RUN pipenv update
+EXPOSE 8000
+CMD ["pipenv", "run", "python3", "manage.py", "runserver", "0.0.0.0:8000"]

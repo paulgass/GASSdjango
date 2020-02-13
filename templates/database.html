@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Home{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+</head>
+<body>
+    <div class="menu_main">
+        <table>
+            <tr>
+                <td><a href="{% url 'home' %}">Home</a></td>
+				<td><a href="{% url 'api' %}">API</a></td>
+                <td><a href="{% url 'database' %}" class="active">Database</a></td>
+				<td><a href="{% url 'contact' %}">Contact</a></td>
+                <td><a href="{% url 'signin' %}">Sign In</a></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <table class=table_database>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>SKU</th>
+                <th>isActive</th>
+                <th>type</th>
+                <th>name</th>
+                <th>desc</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>A4S73K45EV</td>
+                <td>false</td>
+                <td>Software</td>
+                <td>product_1</td>
+                <td>Description of product_1 details.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>OF93J4N7DL</td>
+                <td>true</td>
+                <td>Software</td>
+                <td>product_2</td>
+                <td>Description of product_2 details.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>UE93KD07HT</td>
+                <td>true</td>
+                <td>Hardware</td>
+                <td>product_3</td>
+                <td>Description of product_3 details.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>DG328N4J3K</td>
+                <td>false</td>
+                <td>Software</td>
+                <td>product_4</td>
+                <td>Description of product_4 details.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>YP63NV8DH5</td>
+                <td>true</td>
+                <td>Hardware</td>
+                <td>product_5</td>
+                <td>Description of product_5 details.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>

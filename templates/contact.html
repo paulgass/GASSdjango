@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Home{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+</head>
+<body>
+    <div class="menu_main">
+        <table>
+            <tr>
+                <td><a href="{% url 'home' %}">Home</a></td>
+				<td><a href="{% url 'api' %}">API</a></td>
+                <td><a href="{% url 'database' %}">Database</a></td>
+				<td><a href="{% url 'contact' %}" class="active">Contact</a></td>
+                <td><a href="{% url 'signin' %}">Sign In</a></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div class="div_contact">
+        <h2>Contact Information</h2>
+        <ul>
+            <li><strong>Address:</strong> 12345 Main Street Las Angelas, CA 90210</li>
+            <li><strong>Phone:</strong> 555.555.5555</li>
+            <li><strong>Email:</strong> admin@website.com</li>
+        </ul>
+    </div>
+    <br>
+</body>
+</html>

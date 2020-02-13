@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}Home{% endblock %}</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+</head>
+<body>
+	<div class="menu_main">
+        <table>
+            <tr>
+                <td><a href="{% url 'home' %}">Home</a></td>
+				<td><a href="{% url 'api' %}" class="active">API</a></td>
+                <td><a href="{% url 'database' %}">Database</a></td>
+				<td><a href="{% url 'contact' %}">Contact</a></td>
+                <td><a href="{% url 'signin' %}">Sign In</a></td>
+            </tr>
+        </table>
+	</div>
+	<br>
+	<p>Example Text For API Page</p>
+</body>
+</html>

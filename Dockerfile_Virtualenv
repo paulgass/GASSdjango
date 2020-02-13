@@ -1,0 +1,9 @@
+FROM debian:10
+RUN mkdir /gassdjangodocker
+WORKDIR /gassdjangodocker
+ADD . /gassdjangodocker
+RUN apt-get clean && apt-get update -m -y && apt-get install -y 	python-pip 	python3-pip 	libkrb5-dev 	libsnappy-dev 	libssl-dev 	libffi-dev && rm -rf /var/lib/apt/lists/*
+RUN alias pip=pip3
+RUN pip3 install -r requirements.txt
+EXPOSE 8000
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]

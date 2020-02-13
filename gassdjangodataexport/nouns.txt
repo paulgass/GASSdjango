@@ -1,0 +1,16 @@
+apple
+banana
+egg
+bread
+toast
+rice
+water
+pasta
+meat
+tomato
+potato
+broccoli
+carrot
+orange
+pear
+watermelon
